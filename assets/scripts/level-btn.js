@@ -18,7 +18,7 @@ const displayLevelBtn = async () => {
 
             btnElement.innerHTML = `
             <button id="level-${level.level_no}"
-            onclick="loadVocab(${level.level_no})" 
+            onclick="handleButtonClick(${level.level_no})" 
             class="btn box-border rounded-md border-[#422AD5] text-[#422AD5] focus:bg-[#422AD5] hover:bg-[#422AD5] focus:text-white hover:text-white">
             <i class="fa-solid fa-book-open"></i>${levelText}
             </button>
@@ -34,4 +34,27 @@ const displayLevelBtn = async () => {
         }
     }
 };
+
+// Add this new function to handle button clicks
+const handleButtonClick = (levelNo) => {
+    // Remove active class from all buttons
+    const allButtons = document.querySelectorAll('#level-btn-container button');
+    allButtons.forEach(btn => {
+        btn.classList.remove('active-btn');
+        btn.style.backgroundColor = '';
+        btn.style.color = '';
+    });
+
+    // Add active class to clicked button
+    const clickedButton = document.getElementById(`level-${levelNo}`);
+    if (clickedButton) {
+        clickedButton.classList.add('active-btn');
+        clickedButton.style.backgroundColor = '#422AD5';
+        clickedButton.style.color = 'white';
+    }
+
+    // Call the original loadVocab function
+    loadVocab(levelNo);
+};
+
 displayLevelBtn();
