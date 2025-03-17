@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENGLISH JANALA</title>
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+    <!-- daisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Custom Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tiro+Bangla:ital@0;1&display=swap"
+        rel="stylesheet">
+    <!-- font Awesome Kit -->
+    <script src="https://kit.fontawesome.com/cebd269f74.js" crossorigin="anonymous"></script>
+
+    <style>
+        .font-bangla {
+            font-family: 'Hind Siliguri', sans-serif;
+        }
+        .font-poppins {
+            font-family: 'Poppins', sans-serif;
+        }
+        .font-tiroBangla {
+            font-family: 'Tiro Bangla', serif;
+        }
+        .font-inter {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="font-poppins">
+    <nav id="navbar"
+        class="hidden sticky top-0 left-0 right-0 z-50 flex justify-between items-center px-20 py-4 box-border border-b border-[#C6BDBD] bg-[#ddd3d3] backdrop-blur-[40px] bg-gradient-to-t from-transparent via-slate-50 via-white to-transparent">
+        <a href="index.html">
+            <div class="flex justify-center items-center gap-1 py- 2">
+                <h1 class="font-semibold text-[#18181B] text-xl">English</h1>
+                <img src="assets/images/logo.png" alt="logo">
+                <h1 class="font-tiroBangla text-xl">জানালা</h1>
+            </div>
+        </a>
+        <div class="nav-btn-container">
+            <button id="faq-btn"
+                class="btn box-border border-[#422AD5] text-[#422AD5] hover:bg-[#422AD5] hover:text-white group">
+                <i class="fa-solid fa-circle-question"></i> FAQ</button>
+            <button id="learn-btn"
+                class="btn box-border border-[#422AD5] text-[#422AD5] hover:bg-[#422AD5] hover:text-white ">
+                <i class="fa-solid fa-book-open"></i> Learn</button>
+            <button id="logout-btn"
+                class="btn box-border border-[#422AD5] text-[#422AD5] hover:bg-[#422AD5] hover:text-white ">
+                <i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+        </div>
+    </nav>
+
+    <main class="flex flex-col gap-52">
+        <!-- hero Section -->
+        <section id="banner-section" class="block flex justify-between items-center px-20 py-4">
+            <div class=" flex flex-col gap-6 ">
+                <h1 class="font-bold text-4xl"><span class="text-[#00BCFF]">English</span> is Easy!!</h1>
+                <p class="font-bangla text-2xl">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা
+                    <br> আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে
+                    <br> যাবে অন্য একটি Level এ
+                </p>
+                <form action="submit" class="flex flex-col gap-5 items-start">
+                    <fieldset class="fieldset flex flex-col gap-5">
+                        <input type="text" class="input" placeholder="Enter Your name" />
+                        <input type="password" class="input" placeholder="Enter PassKey (123456)" />
+                    </fieldset>
+                    <button id="get-started-btn"
+                        class="btn font-semibold bg-[#422AD5] text-white hover:bg-white hover:text-[#422AD5] hover:box-border hover:border-[#422AD5]">Get
+                        Started</button>
+                </form>
+            </div>
+            <img src="assets/images/hero-student.png" alt="Hero image">
+        </section>
+        <!-- vocabulary section -->
+        <section id="vocab-section" class="hidden flex flex-col justify-center items-center gap-10 px-20">
+            <h1 class="text-4xl font-bold"> <span class="text-[#00BCFF]">Let's</span> Learn Vocabularies </h1>
+            <div id="level-btn-container" class="flex items-center gap-5 pb-16">
+            </div>
+            <div class="w-full bg-[#F8F8F8]">
+                <div id="vocab-container" class="grid grid-cols-3 gap-8 p-8">
+                    <div></div>
+                    <div class="flex flex-col justify-center items-center gap-3">
+                        <h3 class="font-bangla text-[#79716B] font">আপনি এখনো কোন Lesson Select করেন ন</h3>
+                        <p class="font-bangla text-4xl text-[#292524] font-semibold">একটি Lesson Select করুন।</p>
+                    </div>
+                    <div></div>
+                </div>
+            </div>
+        </section>
+        <!-- faq section -->
+        <section id="faq-section" class="hidden flex flex-col items-center gap-20 px-20 pb-24">
+            <h1 class="text-[#18181B] text-4xl font-bold"><span class="text-[#00BCFF]">Frequently</span> Asked Questions
+            </h1>
+            <div class="w-full flex flex-col gap-5 ">
+                <!-- accordion-1 -->
+                <div class="collapse collapse-plus bg-base-100 border border-base-300 bg-[#F8F8F8] rounded-2xl">
+                    <input type="radio" name="my-accordion-3" checked="checked" />
+                    <div class="collapse-title text-lg font-medium">1. The difference between var, let, and const?</div>
+                    <div class="collapse-content text-[#62748E]">
+                        <p><strong>var:</strong> Function-scoped variable declaration that can be redeclared and
+                            updated. Variables declared with var are hoisted to the top of their scope.</p>
+                        <p><strong>let:</strong> Block-scoped variable declaration that can be updated but not
+                            redeclared within the same scope. Not hoisted in the same way as var.</p>
+                        <p><strong>const:</strong> Block-scoped variable declaration for constants that cannot be
+                            updated or redeclared. Must be initialized at declaration time and maintains constant
+                            reference.</p>
+                    </div>
+                </div>
+                <!-- accordion-2 -->
+                <div class="collapse collapse-plus bg-base-100 border border-base-300 bg-[#F8F8F8] rounded-2xl">
+                    <input type="radio" name="my-accordion-3" />
+                    <div class="collapse-title text-lg font-medium">2. The difference between map(), forEach(), and
+                        filter()?</div>
+                    <div class="collapse-content text-[#62748E]">
+                        <p><strong>map():</strong> Creates a new array by transforming each element in the original
+                            array. Returns the new array.</p>
+                        <p><strong>forEach():</strong> Executes a function on each element of an array but doesn't
+                            return anything. Used for side effects.</p>
+                        <p><strong>filter():</strong> Creates a new array containing only elements that pass a test
+                            function. Returns the filtered array.</p>
+                    </div>
+                </div>
+                <!-- accordion-3 -->
+                <div class="collapse collapse-plus bg-base-100 border border-base-300 bg-[#F8F8F8] rounded-2xl">
+                    <input type="radio" name="my-accordion-3" />
+                    <div class="collapse-title text-lg font-medium">3. Explain arrow functions and how they are
+                        different from regular functions?</div>
+                    <div class="collapse-content text-[#62748E]">
+                        <p><strong>Arrow functions</strong> are a more concise syntax introduced in ES6. Key differences
+                            from regular functions:</p>
+                        <p>1. Shorter syntax with implicit returns for one-line functions</p>
+                        <p>2. Don't have their own 'this' binding - they inherit 'this' from the parent scope</p>
+                        <p>3. Cannot be used as constructors (no 'new' keyword)</p>
+                        <p>4. Don't have arguments object or their own prototype</p>
+                    </div>
+                </div>
+                <!-- accordion-4 -->
+                <div class="collapse collapse-plus bg-base-100 border border-base-300 bg-[#F8F8F8] rounded-2xl">
+                    <input type="radio" name="my-accordion-3" />
+                    <div class="collapse-title text-lg font-medium">4. How JavaScript Promises work?</div>
+                    <div class="collapse-content text-[#62748E]">
+                        <p>Promises are objects representing the eventual completion or failure of an asynchronous
+                            operation. They have three states:</p>
+                        <p><strong>Pending:</strong> Initial state, neither fulfilled nor rejected</p>
+                        <p><strong>Fulfilled:</strong> Operation completed successfully</p>
+                        <p><strong>Rejected:</strong> Operation failed</p>
+                        <p>Promises use .then() for success handling, .catch() for error handling, and can be chained to
+                            avoid callback hell. They can also be combined with async/await for more readable
+                            asynchronous code.</p>
+                    </div>
+                </div>
+                <!-- accordion-5 -->
+                <div class="collapse collapse-plus bg-base-100 border border-base-300 bg-[#F8F8F8] rounded-2xl">
+                    <input type="radio" name="my-accordion-3" />
+                    <div class="collapse-title text-lg font-medium">5. How closures work in JavaScript?</div>
+                    <div class="collapse-content text-[#62748E]">
+                        <p>A closure is a function that has access to its own scope, the outer function's variables, and
+                            global variables even after the outer function has finished executing.</p>
+                        <p>Closures are created when a function is defined within another function, allowing the inner
+                            function to access the outer function's variables and parameters.</p>
+                        <p>Common uses include data privacy (creating private variables), function factories, and
+                            maintaining state in event handlers or callbacks.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Open the modal using ID.showModal() method -->
+        <dialog id="wordInfoModal" class="modal rounded-3xl">
+        </dialog>
+    </main>
+    <footer id="footer-section"
+        class=" box-border px-20 py-24 border-t-4 border-[#FFEBEB] flex items-end justify-between">
+        <div class="flex flex-col gap-5">
+            <div class="flex items-center gap-1 py- 2">
+                <h1 class="font-semibold text-[#18181B] text-xl">English</h1>
+                <img src="assets/images/logo.png" alt="logo">
+                <h1 class="font-tiroBangla text-xl">জানালা</h1>
+            </div>
+            <h1 class="text-xl font-medium font-bangla">ইংরেজি শিখুন সহজে</h1>
+            <p class="font-bangla ">Providing ED-Tech Applications since 2025</p>
+        </div>
+        <div>
+            <h1 class="font-semibold pb-4">Follow Us</h1>
+            <div class="flex items-center gap-4">
+                <a href="https://www.facebook.com"><img src="assets/images/fb-thumb.png" alt="Facebook logo"></a>
+                <a href="https://www.youtube.com"><img src="assets/images/youtube-thumb.png" alt="Youtube Logo"></a>
+                <a href="https://www.instagram.com"><img src="assets/images/instagram-thumb.png"
+                        alt="Instagram logo"></a>
+                <a href="https://www.github.com"><img src="assets/images/github-thumb.png" alt="Github logo"></a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="assets/scripts/smoothScrolling.js"></script>
+    <script src="assets/scripts/logout.js"></script>
+    <script src="assets/scripts/getStarted.js"></script>
+    <script src="assets/scripts/level-btn.js"></script>
+    <script src="assets/scripts/loadVocab.js"></script>
+    <script src="assets/scripts/wordInfoBtn.js"></script>
+    <script src="assets/scripts/wordPronounceBtn.js"></script>
+</body>
+</html>
